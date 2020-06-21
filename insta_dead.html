@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ankita Pal </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+        
+	<meta name="description" content="Ankita Pal  is an Machine Learning Engineer from Bengaluru. See more..." />
+	<meta name="keywords" content="Portfolio, Praven-, Ankita Pal-,Ankita Pal--linkedin,Ankita Pal--github,portfolio,Ankita Pal,,Ankita Pal-linkedin,ml-engineer,ai-engineer-Ankita Pal, Ankita Pal  github, Ankita Pal  linkedin, Ankita Pal ml engineer, Ankita Pal github, Ankita Pal linkedin, ai engineer"/>
+	<meta name="author" content="Ankita Pal " />
+        
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143950329-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-143950329-1');
+    </script>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/modernizr-2.6.2.min.js"></script>
+
+	</head>
+	<body>
+	<div id="colorlib-page">
+		<div class="container-wrap">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+			<div class="text-center">
+				<div class="author-img" style="background-image: url(images/DSC_0256.JPG);"></div>
+				<h1 id="colorlib-logo"><a href="index.html">Ankita Pal </a></h1>
+				<span class="position"><strong>Graduate student at University of Washington</strong></span>
+			</div>
+			<nav id="colorlib-main-menu" role="navigation" class="navbar">
+				<!--<div id="navbar" class="collapse">-->
+					<ul>
+						<li class="active"><a href="" data-nav-section="home">Home</a></li>
+						<li><a href="index.html#ABOUT">About</a></li> 
+						<li><a href="index.html#PROJECTS" data-nav-section="projects">Projects</a></li>
+						<li><a href="index.html#EDUCATION" data-nav-section="education">Education</a></li>
+						<li><a href="index.html#EXPERIENCE" data-nav-section="experience">Experience</a></li>
+                        <li><a href="index.html#ACHIEVEMENT" data-nav-section="achievement">Achievement</a></li>
+                        <li><a href="index.html#CERTIFICATION" data-nav-section="certification">Certification</a></li>
+						<li><a href="index.html#CONTACT" data-nav-section="contact">Contact</a></li>
+					</ul>
+				<!--</div>-->
+			</nav>
+		</aside>
+
+		<div id="colorlib-main">
+			
+			<section class="colorlib-about" data-section="about">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="col-md-12">
+									<div class="about-desc">
+										<h2>The Insta-Dead:The rhetoric of the human remains trade on Instagram Replication Project</h2><a href="https://github.com/UW-MSDS-DATA-598-Reproducibility-WI20/gupta-kharb-li-pal-tandon-replication-project" ><u>Github Link</u></a>
+											   <h3><a>University of Washington</a><span>&nbsp;&nbsp;Mar 2020 - Jun 2020</span></h3>
+											  <p style="color: black">The purpose of this project is to reproduce the figures published in the Insta-Dead paper by Damien Huffer and Shawn Graham. The paper explores the trade of human skulls and bones taking place on the social media platform, Instagram. We would like to use the data provided by the authors to reproduce the results of the paper, ideally using R. The figure we are reproducing involves topic modelling for posts by a single Instagram user/trader. For LDA, by using the gensim library in Python as a replacement for the mallet library we would like to reproduce similar topics and generate similar topic weights for eaach post by the user.<br>Paper: Huffer, D. and Graham, S. 2017 The Insta-Dead: The rhetoric of the human remains trade on Instagram, Internet Archaeology 45. <a href="https://doi.org/10.11141/ia.45.5.">https://doi.org/10.11141/ia.45.5.</a></p>
+											  <img src="C:\Users\ankit\Downloads\Website\inboxpraveen.github.io\images\repro_flow.PNG" , style="height:400px; width:900px;">
+											  <h4>Data Collection</h4>
+											  <p>The links to download the dataset have been well documented in the repository provided by the original authors <a href="https://github.com/shawngraham/insta-dead-article">here</a>. The data consists of year, username, text. Here year is the date of posting, username is the ID associated with the particular user and text is the content of the post. Dataset consists of 132,225 instagram posts pertaining to hashtags related to this area of study. </p>
+											  <h4>Experiments</h4>
+											  <p>We choose to vary the topic modeling algorithm used in this paper. We wanted to explore how topic modeling is carried out in Python using the 'gensim' library. The Gensim library uses another LDA method like mallet, that performs Variational Baye's sampling techniques. This is different from the mallet algorithm that is based on Gibb's sampling. The Gensim algorithm performs faster than mallet due to fewer iterations. However the mallet algorithm is known to give more accurate results. We hope to achieve similar results by using Gensim.Gensim provides very desciptive in-built visualizations in Python. However the results are not easy to compare with the R visualization. Thus, we decided to use the ‘gensim’ package in Python to perform topic modeling and the ggplot library in R to draw the visualization for comparison.  </p>											  
+											  <h4>Result and Conclusion</h4>
+											  <img src="C:\Users\ankit\Downloads\Website\inboxpraveen.github.io\images\repro_res.PNG", style="height:700px; width:700px;">
+											  <p>Using the python package ‘gensim’ for performing the topic modeling and R for compiling the data and plotting the figure, we are able to reproduce the experimental data and reproduce the Figure to a large extent. The selected keywords for the 25 topics in our reproduced figure are slightly different than those in the original one, although they share many overlaps, such as oddities, skullart, tattoo and bones. This can be attributed to the differences in the internal workings of the packages in R and python. Based on the comparison of the complete topic names, we find some topics in the replication method that are semantically quite similar to the original topics</p>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			
+			
+		</div><!-- end:colorlib-main -->
+	</div><!-- end:container-wrap -->
+	</div><!-- end:colorlib-page -->
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Owl carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Counters -->
+	<script src="js/jquery.countTo.js"></script>
+	
+	
+	<!-- MAIN JS -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+

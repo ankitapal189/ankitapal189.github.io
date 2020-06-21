@@ -1,4 +1,4 @@
-# [Ankita Pal](https://inboxpraveen.github.io) portfolio website
+# [Praveen Kumar](https://inboxpraveen.github.io) portfolio website
 
 This is a static portfolio website hosted on GitHub pages. 
 

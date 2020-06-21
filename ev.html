@@ -79,19 +79,49 @@
 											  <h4>Data Collection</h4>
 											  <p>To creat a news recommendation engine, news as well as user data to model the user-item interactions, was needed.  While there are many text corpora for news article data, literature surveys showed that there are no openly available data sources to collect user interactions with news-items. Therefore, we decided to use Twitter data. We used tweets/retweets as the links between users and news articles. The twitter data used in our project was collected using the FakeNewsNet data repository. The repository provides a web-scraping tool that collects tweet and retweet data which refer to Politifact news articles.  This data is pulled using the Twitter API. </p>
 											  <h4>Experiments</h4>
-											  <p>For running our experiments, we split the data into training and test data sets. The split was done based on the active time span for each user.  70% of each user’s tweeting activity is used for the training data while the remaining 30% is retained for testing.  For inactive users (1-2 tweet only),we included 80% of such users in the training data, while the remaining users were considered ascold-start users in the test data. This was done to analyze the performance of our algorithm for cold and warm users. In our algorithm we have proposed two major ideas to recommend more personalized and time based recommendations. 
-											  <ul>
-												<li>Recommendations based on patterns in monthly interests in topics
-												<li>Hybrid Recommendations generated based on user clustering by Louvain community detection and article clustering based on LDA. 
-											  </ul>
-											  To test the effect of each of these proposed ideas, we evaluate our model against other baseline algorithms.</p>
-											  <h4>Model Evaluation Metrics</h4>
-											  <p>We compare our algorithm against the baseline models, by comparing metrics like MAP@K, Precision@K, Recall@K, and Area under the Curve (AUC). Our recommender system produces a list of recommendations for each user in the test set. MAP@K gives insight into how relevant the list of recommended items are while giving a ranking to the recommendations as well.   Therefore,  by using this metric we can determine how well we are front-loading our recommendations. Precision@K and Recall@K do not take into account the ordering of the articles.  These metrics simply calculate the precision and recall by considering only the subset of our top recommendations from rank 1 through k. They are informative in indicating how well the system is performing in terms of recommending the relevant articles. The Precision-Recall curve takes into account both precision and recall of the recommendation system. Since there is a tradeoff between precision and recall, the area under the curve (AUC) can therefore be used as a single balanced measure for the overall quality of a recommendation system.</p>
+												  <p>There were three questions that we were interested in exploring regarding the sales of EVs in the US.
+												  <br><br><b>Question 1</b>: Is there a relationship between the electricity prices of a state and the number of registered EVs in the state? Further, is there a positive or a negative relationship between the two?Since both count of registered EVs and electricity prices are quantitative variables, we used linear regression to answer the question. Furthermore, the coefficients of the linear regression tell us about the strength of the relationship and whether there is a positive or negative effect.We used the electricity and registered EV counts data from 2017 for 50 US states (+ District of Columbia) for the analysis. Since the data for the states is highly dependent on the demographic population, we used the population data for the states from 2018, to standardize the registered EV counts.
+												  <br><br><b>Question 2:</b> Do the economic factors of a state have an effect on the number of EV sales in a state? Which factors have the most significant effect? To answer this question, we studied the following indicators at a state level: 
+												  <ul>
+													<li>GDP</li>
+													<li>Per capita personal Income</li>
+													<li>Unemployment Rate</li>
+												  </ul>
+												  To study the effect of each of these quantitative indicators we used linear regression. We also analyzed whether there was a significant interaction between any of the indicators.We used the economic indicators and registered EV counts data from 2017. We used the population data for the 50 states (+ District of Columbia) from 2018, to standardize the GDP and EV counts since they are dependent on the size of the state.
+												  <br><br><b>Question 3:</b> Do the same economic factors (from Question 2) have a similar effect on the EV sales in the counties of Washington State? To answer this question, we studied the following indicators at a county level:<ul>
+													<li>GDP</li>
+													<li>Per capita personal Income</li>
+													<li>Unemployment Rate</li>
+												  </ul>
+												  <br><br>
+												  To study the effect of each of these quantitative indicators we used linear regression. We used the economic indicators and EV sales data from 2017. We used the population data for 39 counties in Washington from 2018, to standardize the GDP and EV counts since they are dependent on the size of the counties.
+												  <br>While answering all three questions, we used linear regression and thus we will state the assumptions of linear regression before we proceed.
+												  <ol>
+													<li>Independent observations: Based on the data collection methods, the data observations in all our datasets are independent.</li>
+													<li>Constant variance of residuals: This will be observed based on the residual plots of the models</li>
+													<li>Normality or large sample size : For all three questions, our data was limited to the number of demographic regions (50 states in the US + District of Columbia, 39 counties in Washington). Thus we needed to check for the normality and residual assumptions for our data. While analyzing our response variable, we found that the data was not normally distributed. On trying a few different transformations, we found that the log-transform made the data quite normal. This was affirmed by the residual plots</li>
+													<li>Linearity of the data points: Although linearity is not a strict requirement for fitting a linear regression, it is good to have and we can see from the scatterplots that the relationship between the predictors i.e. electricity, per capita personal income, etc., have a linear relationship between the variables</li>
+												 </ol>
+													
+													</p>
+									
 											  
 											  <h4>Result and Conclusion</h4>
-											  <img src="C:\Users\ankit\Downloads\Website\inboxpraveen.github.io\images\results.PNG", style="height:300px; width:900px;">
-											  <img src="C:\Users\ankit\Downloads\Website\inboxpraveen.github.io\images\results2.PNG">
-											  <p>News Recommendation Systems pose a challenging problem due to the high dimensionality of the data.  Hybrid recommendations help to reduce the dimensionality, as well as improve recommendations based on similarities between within news articles and within users. The hybrid approach also helps to solve the User-side and Item-side cold start problems. Using the Louvain community detection algorithm, we find that we are able to group the users quite well in comparison to K-Means clustering.  We also find that LDA performs quite well as a topic modeling algorithm to classify similar articles. The popularity of different topics vary over time. Utilizing users’ time-based interest in different topics, tends to improve the model by recommending more relevant topics at any given time.  The smoothing constantGthat we have used in our implementation is an estimate of the average number of articles read across all time periods. The purpose of the smoothing constant is to take into account new users who do not have a substantial reading history. For the future scope of the project, it would be interesting to study how tuning the smoothing constant can improve the performance of the model.</p>
+											  <p>
+											  <b>Question 1 Conclusion:</b> We reject the null hypothesis that βElectricity_Price = 0 at 5% significance level. Thus we conclude that there is a significant effect of Electricity Price on the EV Population. Based on the coefficient of regression, we see that the relationship is positive i.e. for a difference of 1¢/kWh of electricity prices there is an 11.8% increase in the EV sales per 100,000 people. However, we expected a drop in the EV sales with an increase in the electricity prices. The data shows us otherwise. While trying to examine this result we found that there is a positive correlation between the Per Capita Personal Income and the Electricity Price of a state. Also there is a positive correlation between the Per Capita Personal Income and EV sales of a state. Based on this we infer that states with higher electricity prices tend to have a higher Per Capita Personal Income. Per Capita Personal Income has a significant effect on EV sales which makes sense since people would buy more EV cars when they have a higher purchasing power. Thus, electricity prices also seem to have a positive effect on the EV sales. The correlation between Per Capita Personal Income and Electricity Prices creates a confounding effect.
+											  
+											  <br><br><b>Question 2 Conclusion:</b>PCPI and Per Capita GDP have an effect on the EV Sales by Population of states. Unemployment Rate does not. There are no significant interactions between the indicators. We use WLS method for fitting the models due to the limitations of size and high leverage points.For a difference of $1000 in the Per Capita Personal Income, the number of registered EVs per 100,000 people is 4.2% higher. 
+											  
+											  <br><br><b>Question 3 Conclusion:</b> PCPI and Unemployment Rate have a significant effect on the EV Sales by Population of counties. Per Capita GDP does not. Note that at a country level, PCPI and Per Capita GDP were significant but the Unemployment Rate was not. 
+											  
+											  <br><br>From the WLS coefficients we conclude:
+											  <ul>
+												<li>For a difference of $1000 in the Per Capita Personal Income, the number of registered EVs per 100,000 people in Washington State is 6.9% higher.Compare this to the country level where % difference of the registered EVs per 100,000 people was 4.2%.</li>
+												<li>For a 1% change in Unemployment Rate, the number of registered EVs per 100,000 people in Washington State is 26.4% lower.Compare this to the country level where there is no significant effect of Unemployment rate on the EV sales.</li>
+											  </ul>						  
+											  
+											  
+											  </p>
 
 									</div>
 								</div>

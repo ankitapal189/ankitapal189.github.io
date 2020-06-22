@@ -6,8 +6,7 @@
 	<title>Ankita Pal </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
         
-	<meta name="description" content="Ankita Pal  is an Machine Learning Engineer from Bengaluru. See more..." />
-	<meta name="keywords" content="Portfolio, Praven-, Ankita Pal-,Ankita Pal--linkedin,Ankita Pal--github,portfolio,Ankita Pal,,Ankita Pal-linkedin,ml-engineer,ai-engineer-Ankita Pal, Ankita Pal  github, Ankita Pal  linkedin, Ankita Pal ml engineer, Ankita Pal github, Ankita Pal linkedin, ai engineer"/>
+	<meta name="description" content="Ankita Pal  is an Graduate student at University of Washington. See more..." />
 	<meta name="author" content="Ankita Pal " />
         
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -67,23 +66,32 @@
 							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
 								<div class="col-md-12">
 									<div class="about-desc">
-										<h2>Journey of Women over last 5 decades dashboard</h2><a href="https://public.tableau.com/profile/samarth.modi#!/vizhome/JourneyofWomen/HOME" ><u>Tableau Public Link</u></a>
-											   <h3><a>University of Washington</a><span>&nbsp;&nbsp;Sep 2019 - Dec 2019</span></h3>
-											  <p style="color: black">The ‘Journey of Women’ is an exploratory visual analysis built using Tableau based on the indicators related to women from the World Bank dataset. This visual product aims to provide means to learn how paradigms have changed for women globally over the last 5 decades in areas such as education, quality of life, employment, and leadership roles.</a>
-											  <img src="C:\Users\ankit\Downloads\Website\inboxpraveen.github.io\images\dash.PNG" , style="height:400px; width:900px;"></p>
+										<h2>Time Series Forecasting</h2><a href="https://github.com/ankitapal189/Time-Series"><u>Github Link</u></a>
+											   <h3><a>Delhi Technological University</a><span>&nbsp;&nbsp;Jan 2015- Jun 2015</span></h3>
+											  <p style="color: black">This project has been taken to get to know about time series forecasting. It explores the various models that can be applied to time series data. We wanted to visually interpret the translation of the various components if the time series. It shows the MICROSOFT EXCEL implementation of these models as well as compares the result coming from ZAITUN TIME SERIES , a software especially design for time series forecasting . At the end it gives a MATLAB code for the moving average forecasting with seasonal indices</p>
 											  <h4>Data Collection</h4>
-											  <p>The WDI data files contain the indicators for 58 years ranging from the years 1960 through 2018. It contains data for 264 countries (including regions) for a total of 1,432 indicators. <a href=" https://datacatalog.worldbank.org/dataset/world-development-indicators">Link</a> to the data source. For our visual story, we shortlisted 27 relevant indicators that focus on our 4 areas of interest: quality of life, education, employment and leadership for women. We used the ‘Tableau Prep Builder’ tool for cleaning the data and preparing it for the final dashboard.</p>
+											  <p>We used the quarterly rainfall data from 1995-2005 as the train data, to develope various models. We used 2006-2011 data to test the model. We checked the model graphically.</p>
 											  <h4>Experiments</h4>
-											  <p>We brainstormed ideas during the 5 design sheets exercise to align on the framework of the dashboard. We aligned on creating 4 views to answer the questions raised during information gathering.
-											  <ol>
-												<li> Women & Quality of Life</li>
-												<li> Women & Education </li>
-												<li> Women & Employment </li>
-												<li> Women & Leadership </li>
-											  </ol>
-											  Different team members focused on one of the 4 categories and presented the best possible way to visualize that information. We followed the Heer and Shneiderman's mantra of ‘Overview first, zoom and filter, details on demand’to design each view of the exploratory analysis. The goal of our visual story in any area is to first show the related indicators at a global level and then allow the user to deep dive into any specific geography, indicator or period of time. We also designed for ways to allow users to interact with the visuals for an enhanced experience</p>	
+											  <p>We used various time series models to train the given data. They were:
+												<ol>
+												<li>Moving average of degree 1 and 2</li>
+												<li>Weighted Moving Average</li>
+												<li>Double moving average</li>
+												<li>Exponent Smoothing</li>
+												<li>Double Exponent Smoothing</li>
+												<li>Linear Trend Model</li>
+												<li>Quadratic Trend Model</li>
+												<li>Additive Seasonal Model</li>
+												<li>Multiplicative Seasonal Model</li>
+												<li>Holt-Winters Model</li>
+												<li>Holt-Winters Multiplicative Model</li>
+												</ol>
+												We also wrote a program in MATLAB to train the data using the moving average forecasting model with seasonal indices. We forecasted the quarterly rainfall for required time period
+											  </p>
+											  
 											  <h4>Result and Conclusion</h4>
-											  <p>We want to paint a realistic picture of the situation as it is today. We understand that some areas will need more help than others to ensure women are on par with men, at the least. While in some areas, women might have managed to make things fair and better. “Humans are allergic to change. They love to say, ‘We’ve always done it this way.’ I try to fight that. That’s why I have a clock on my wall that runs counter-clockwise.” – Grace Hopper. Our hope is that this interactive visual tool can stir some change in society.</p>								  
+											  <img src="C:\Users\ankit\Downloads\Website\inboxpraveen.github.io\images\ctr_res.PNG", style="height:300px; width:400px;"><br>
+											  <p>The various models explored and implemented on given rainfall data, along with the visual graphs , give us basic understanding of  the working and calculations involved in the shaping the model and how the test set responds to the model. We observe that Holt-Winters Multiplicative Model gives the best test predictions because it takes into account the trend, seasonality as well cyclic properties of the data.</p>
 
 									</div>
 								</div>

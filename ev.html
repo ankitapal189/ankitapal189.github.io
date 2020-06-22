@@ -77,7 +77,33 @@
 											  </ol>
 											  </p>
 											  <h4>Data Collection</h4>
-											  <p>To creat a news recommendation engine, news as well as user data to model the user-item interactions, was needed.  While there are many text corpora for news article data, literature surveys showed that there are no openly available data sources to collect user interactions with news-items. Therefore, we decided to use Twitter data. We used tweets/retweets as the links between users and news articles. The twitter data used in our project was collected using the FakeNewsNet data repository. The repository provides a web-scraping tool that collects tweet and retweet data which refer to Politifact news articles.  This data is pulled using the Twitter API. </p>
+											  <p>Our study is conducted on the following independent datasets: 
+											    <ul>
+													<li>EV registration count in the US and in the Washington State in 2017</li>
+													<li>Electricity price of different states in US in 2017</li>
+													<li>Economic indicators dataset for the US states and WA counties in 2017</li>	
+													<li>Population dataset for the US states and WA counties in 2018</li>
+												</ul>
+												Since our study assesses EV adoption at the US level with a focus on WA state. Therefore, we group our datasets into two separate group levels:
+												<ol>
+												 <li><b>US-Level</b></li>
+													<ol type='a'>
+														<li>Electric Vehicle Registration Counts by State: Each row of the dataset represents one US state with its total approximate count of EV registration in 2017.URL: <a href="https://afdc.energy.gov/data/10962">https://afdc.energy.gov/data/10962. Source: IHS Markit light-duty vehicle registration in 2017</a></li>
+														<li>Electricity Price by State:Each row of the dataset represents one US state with its average retail electricity price (cents/kWh) in 2017.URL: <a href="https://www.eia.gov/electricity/state/">https://www.eia.gov/electricity/state/</a>.Source: U.S. Energy Information Administration</li>
+														<li>Economic Indicators by State:Each row of the dataset represents one US state with its economic indicators: unemployment rate, GDP, and per capita personal income.URL: <a href="https://fred.stlouisfed.org/categories/27281">https://fred.stlouisfed.org/categories/27281</a>. Source: Federal Reserve Bank of St. Louis
+														<li>Population by State:Each row of the dataset represents one US state with its population estimates in 2018.URL: <a href="https://www.census.gov/quickfacts/geo/chart/US/PST045218">https://www.census.gov/quickfacts/geo/chart/US/PST045218</a>. Source: U.S. Census</li>
+													</ol>
+												 </li>
+												 <li><b>County-Level</b>
+													<ol type='a'>
+														<li>Electric Vehicle Population by WA:Each row of the dataset represents one unique EV Vehicle Identification Number (VIN) and its information (city, state, model year, electric range, sale date, etc.) within the Washington state.URL: <a href="https://data.wa.gov/Transportation/Electric-Vehicle-Title-and-Registration-Activity/rpr4-cgyd">https://data.wa.gov/Transportation/Electric-Vehicle-Title-and-Registration-Activity/rpr4-cgyd</a>. Source: WA Department of Licensing</li>
+														<li>Economic Indicators by WA counties:Each row of the dataset represents one WA county with its economic indicators: unemployment rate, GDP, and per capita personal income.URL: <a href="https://fred.stlouisfed.org/categories/30336">https://fred.stlouisfed.org/categories/30336</a>. Source: Federal Reserve Bank of St. Louis</li>
+														<li>Population by WA counties:Each row of the dataset represents one WA county with its population estimates in 2018. URL: <a href="https://www.census.gov/quickfacts/fact/map/WA/PST045218"> https://www.census.gov/quickfacts/fact/map/WA/PST045218</a>. Source: U.S. Census Bureau
+														</li>
+													</ol>
+												</li>
+												</ol>
+											</p>
 											  <h4>Experiments</h4>
 												  <p>There were three questions that we were interested in exploring regarding the sales of EVs in the US.
 												  <br><br><b>Question 1</b>: Is there a relationship between the electricity prices of a state and the number of registered EVs in the state? Further, is there a positive or a negative relationship between the two?Since both count of registered EVs and electricity prices are quantitative variables, we used linear regression to answer the question. Furthermore, the coefficients of the linear regression tell us about the strength of the relationship and whether there is a positive or negative effect.We used the electricity and registered EV counts data from 2017 for 50 US states (+ District of Columbia) for the analysis. Since the data for the states is highly dependent on the demographic population, we used the population data for the states from 2018, to standardize the registered EV counts.
